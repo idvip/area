@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>省市县联动</title>
+    <script src="js/linq.min.js"></script>
+    <script src="js/areadata.js"></script>
+    <script src="js/areaload.js"></script>
+</head>
+<body>
+    <fieldset>
+        <legend>省市县选择</legend>
+        <div>
+            <select id="s"></select>
+            <select id="c"></select>
+            <select id="x"></select>
+        </div>
+    </fieldset>
+    <br/>
+    <fieldset>
+        <legend>省市选择（+设定初始值）</legend>
+        <div>
+            <select id="s1"></select>
+            <select id="c1"></select>
+        </div>
+    </fieldset>
+    <div>
+        <ol>
+            <li>导入：linq.js（<a href="http://www.github.com/yuzeng/linq" target="_blank">http://www.github.com/yuzeng/linq</a>）</li>
+            <li>导入：areadata.js（地区数据）</li>
+            <li>导入：areaload.js（处理数据）</li>
+            <li>调用initArea("省Select控件ID", "市Select控件ID", "县Select控件ID","省初始值ID(可选)","市初始值ID(可选)","县初始值ID(可选)");</li>
+        </ol>
+    </div>
+    <script>
+        initArea("s", "c", "x");
+        initArea("s1", "c1",null,17,160);
+    </script>
+</body>
+</html>
